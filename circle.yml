@@ -9,3 +9,9 @@ dependencies:
 test:
   post:
     - bundle exec htmlproofer ./_site --check-html --disable-external
+
+deployment:
+  prod:
+    branch: master
+    commands:
+      - rsync -va --delete ./_site circleci@smallarmyofnerds.com:/var/www/smallarmyofnerds.com/public
