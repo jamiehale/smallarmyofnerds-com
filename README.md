@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/jamiehale/smallarmyofnerds-com.svg?style=svg)](https://circleci.com/gh/jamiehale/smallarmyofnerds-com)
+
 # Small Army Of Nerds Site Code
 
 This is the Jekyll code for the smallarmyofnerds.com site.
