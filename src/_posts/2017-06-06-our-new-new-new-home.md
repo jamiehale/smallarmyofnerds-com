@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Our new new new home"
-date: 2017-06-06 22:00 -0500
+date: 2017-06-06 22:00:00 -0400
 categories: uncategorized
 ---
 (A few months ago I took the [Penetration Testing with Kali][1] course. Now this site is static HTML generated with [Jekyll][2]. I'll let you fill in the blanks.)
