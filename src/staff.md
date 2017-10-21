@@ -24,5 +24,5 @@ He skis, he'll play any musical instrument you leave lying around, and when he t
 [4]: http://twitter.com/jamiehale
 [5]: https://stackoverflow.com/users/34533/jamie-hale
 [6]: https://ethereum.stackexchange.com/users/2788/jamie-hale
-[7]: https://smallarmyofnerds.com/wp-content/uploads/2016/10/2016-10-19-Jamie-Hale-Resume.pdf
-[8]: https://smallarmyofnerds.com/wp-content/uploads/2016/09/Jamie-Hale-CV.pdf
+[7]: https://smallarmyofnerds.com/assets/2017-07-23-Jamie-Hale-Resume.pdf
+[8]: https://smallarmyofnerds.com/assets/Jamie-Hale-CV.pdf
