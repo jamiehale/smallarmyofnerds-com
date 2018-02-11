@@ -5,6 +5,10 @@ permalink: /projects/
 ---
 These are projects we've worked on in the past, and some that are ongoing.
 
+## [DCAT Chorus][9]
+
+DCAT (Drum Corps Alumni Toronto) Chorus is a performing choir consisting of past Toronto drum corps members, friends, and family.  Jamie Hale actively maintains their website, and since fall 2017 has been transitioning the site from hand-crafted HTML to modern [Jekyll][10] and [Tachyons][11].
+
 ## CIGAR
 _([Candu Energy Inc.][1] for [Bruce Power][2])_
 
@@ -69,3 +73,6 @@ The Small Army provided specialized laptops configured for remote monitoring of 
 [6]: https://scratch.mit.edu/users/jamiesonhale/
 [7]: http://fsf.org
 [8]: http://opg.com
+[9]: http://dcatchorus.ca
+[10]: https://jekyllrb.com/
+[11]: http://tachyons.io/
