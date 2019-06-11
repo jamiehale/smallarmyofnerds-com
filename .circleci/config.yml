@@ -53,9 +53,9 @@ jobs:
             gsutil rsync -r _site/ ${DEPLOY_BUCKET}
 workflows:
   version: 2
-  deploy:
+  build-deploy:
     jobs:
       - build
       - deploy:
-        requires:
-          - build
+          requires:
+            - build
