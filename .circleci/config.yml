@@ -47,7 +47,8 @@ jobs:
             echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
             gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
             gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
-      - run: Copy site files to GCS
+      - run:
+          name: Copy site files to GCS
           command: |
             gsutil rsync -r _site/ ${DEPLOY_BUCKET}
 workflows:
