@@ -17,26 +17,44 @@ jobs:
           - v1-dependencies-{{ checksum "Gemfile.lock" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
-
       - run:
           name: install dependencies
           command: bundle install --jobs=4 --retry=3 --path vendor/bundle
-
       - save_cache:
           paths:
             - ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-
       - run:
           name: build
           command: JEKYLL_ENV=production bundle exec jekyll build
-
       - run:
           name: run tests
           command: bundle exec htmlproofer ./_site --check-html --disable-external
-
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./_site
+  deploy:
+    docker:
+      - image: google/cloud-sdk
+    working_directory: ~/src
+    steps:
+      - attach_workspace:
+          at: .
       - run:
-          name: deploy
+          name: Authenticate with GCP
           command: |
-            sudo apt install rsync
-            rsync -va -e "ssh -o StrictHostKeyChecking=no" --delete ./_site/* circleci@smallarmyofnerds.com:/var/www/smallarmyofnerds.com/public
+            echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
+            gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
+            gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
+      - run: Copy site files to GCS
+          command: |
+            gsutil rsync -r _site/ ${DEPLOY_BUCKET}
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - build
+      - deploy
+        requires:
+          - build
