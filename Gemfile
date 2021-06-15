@@ -1,10 +1,8 @@
 source "https://rubygems.org"
-ruby '2.5.1'
+ruby '2.7.2'
 
 gem "jekyll", "3.9.1"
-
-group :jekyll_plugins do
-   gem "jekyll-feed", "~> 0.11"
-end
+gem 'jekyll-feed'
+gem "kramdown-parser-gfm"
 
 gem 'html-proofer'
